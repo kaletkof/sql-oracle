@@ -13,7 +13,6 @@ FROM
 
 
 
-
 -- 2.
 
 SELECT
