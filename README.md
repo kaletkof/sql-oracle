@@ -19,7 +19,7 @@ Solve all course tasks SBD - laboratories
 Oracle Database 18c Express Edition Release 18.0.0.0.0
 
 ## Status
-Project is: _in progress_
+Project is: _completed_
 
 ## Contact
-Created by kaletkof@gmail.com
+Created by k.qaletka@gmail.com
