@@ -1,6 +1,5 @@
 /* Język SQL. Rozdział 13.Wyzwalacze – zadania  */
 
-
 -- 1
 CREATE SEQUENCE seq_zesp START WITH 60 INCREMENT BY 10;
 
