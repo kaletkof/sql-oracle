@@ -1,9 +1,6 @@
 /* Język SQL. Rozdział 2. Proste zapytania – zadania */
 
-
-
 -- 1.
-
 SELECT
     id_zesp,
     nazwa,
@@ -11,10 +8,7 @@ SELECT
 FROM
     zespoly;
 
-
-
 -- 2.
-
 SELECT
     id_prac,
     nazwisko,
@@ -27,30 +21,21 @@ SELECT
 FROM
     pracownicy;
 
-
-
 -- 3.
-
 SELECT
     nazwisko,
     placa_pod * 12 AS roczne_dochody
 FROM
     pracownicy;
 
-
-
 -- 4.
-
 SELECT
     etat,
     placa_pod + coalesce(placa_dod, 0) AS miesieczne_zarobki
 FROM
     pracownicy;
 
-
-
 -- 5.
-
 SELECT
     id_zesp,
     nazwa,
@@ -60,10 +45,7 @@ FROM
 ORDER BY
     nazwa;
 
-
-
 -- 6. 
-
 SELECT DISTINCT
     etat
 FROM
@@ -71,10 +53,7 @@ FROM
 ORDER BY
     etat;
 
-
-
 -- 7.
-
 SELECT
     id_prac,
     nazwisko,
@@ -89,10 +68,7 @@ FROM
 WHERE
     etat = 'ASYSTENT';
 
-
-
 -- 8.
-
 SELECT
     id_prac,
     nazwisko,
@@ -107,10 +83,7 @@ WHERE
 ORDER BY
     placa_pod DESC;
 
-
-
 -- 9. 
-
 SELECT
     nazwisko,
     id_zesp,
@@ -120,10 +93,7 @@ FROM
 WHERE
     placa_pod BETWEEN 300 AND 800;
 
-
-
 -- 10.
-
 SELECT
     nazwisko,
     etat,
@@ -133,10 +103,7 @@ FROM
 WHERE
     nazwisko LIKE '%SKI';
 
-
-
 -- 11.
-
 SELECT
     id_prac,
     id_szefa,
@@ -148,10 +115,7 @@ WHERE
     placa_pod > 1000
     AND id_szefa IS NOT NULL;
 
-
-
 -- 12.
-
 SELECT
     nazwisko,
     id_zesp
@@ -162,10 +126,7 @@ WHERE
     AND ( nazwisko LIKE 'M%'
           OR nazwisko LIKE '%SKI' );
 
-
-
 -- 13.
-
 SELECT
     nazwisko,
     etat,
@@ -182,10 +143,7 @@ WHERE
 ORDER BY
     stawka;
 
-
-
 -- 14.
-
 SELECT
     nazwisko,
     etat,
@@ -199,10 +157,7 @@ ORDER BY
     etat,
     nazwisko;
 
-
-
 -- 15.
-
 SELECT
     nazwisko
     || ' PRACUJE OD '
