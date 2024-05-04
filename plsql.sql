@@ -1,6 +1,5 @@
 /* Język SQL. Rozdział 9.PLSQL – zadania  */
 
-
 -- 1
 SET SERVEROUTPUT ON
 DECLARE
