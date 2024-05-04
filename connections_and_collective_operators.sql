@@ -1,7 +1,6 @@
 /* Język SQL. Rozdział 4.Połączenia i operacje zbiorowe – zadania  */
 
 -- 1.
-
 SELECT
     nazwisko,
     etat,
@@ -14,7 +13,6 @@ WHERE
     p.id_zesp = z.id_zesp;
 
 -- 2.
-
 SELECT
     nazwisko,
     etat,
@@ -30,7 +28,6 @@ ORDER BY
     nazwisko;
 
 -- 3.
-
 SELECT
     nazwisko,
     adres,
@@ -43,7 +40,6 @@ WHERE
     AND p.placa_pod > 400;
 
 -- 4.
-
 SELECT
     nazwisko,
     placa_pod,
@@ -57,7 +53,6 @@ WHERE
     placa_pod BETWEEN placa_min AND placa_max;
 
 -- 5.
-
 SELECT
     nazwisko,
     etat,
@@ -73,7 +68,6 @@ WHERE
     AND placa_pod BETWEEN e.placa_min AND e.placa_max;
 
 -- 6.
-
 SELECT
     nazwisko,
     etat,
@@ -92,7 +86,6 @@ ORDER BY
     placa_pod DESC;
 
 -- 7.
-
 SELECT
     nazwisko,
     etat,
@@ -109,7 +102,6 @@ WHERE
     AND (placa_pod * 12 + NVL(placa_dod, 0)) > 5500;
 
 -- 8.
-
 SELECT
     p.id_prac,
     p.nazwisko,
@@ -122,7 +114,6 @@ WHERE
     p.id_szefa = s.id_prac;
 
 -- 9.
-
 SELECT
     p.id_prac,
     p.nazwisko,
@@ -133,4 +124,3 @@ FROM
     pracownicy s
 WHERE
     p.id_szefa = s.id_prac(+);
-
