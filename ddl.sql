@@ -25,14 +25,14 @@ CREATE TABLE przydzialy (
 );
 
 -- 2
-ALTER TABLE przydzialy ADD godizny NUMBER;
+ALTER TABLE przydzialy ADD godziny NUMBER;
 
 -- 3
 COMMENT ON TABLE projekty IS 'Lista projektów prowadzonych przez pracowników';
 COMMENT ON TABLE przydzialy IS 'Informacje o przydziale poszczególnych pracowników do projektów';
 
 -- 4
-SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'PRZYDZIALY';
+SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'PRZYDZIAL';
 
 -- 5
 ALTER TABLE projekty DISABLE CONSTRAINT projekty_opis_projektu_uindex;
