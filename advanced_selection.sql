@@ -1,7 +1,5 @@
 /* Język SQL. Rozdział 3.Zaawansowana selekcja danych – zadania  */
 
-
-
 -- 1.
 SELECT
     nazwisko,
@@ -10,8 +8,6 @@ SELECT
 FROM
     pracownicy;
 
-
-
 -- 2.
 
 SELECT
@@ -19,8 +15,6 @@ SELECT
     translate(nazwisko, 'KLM', 'XXX') AS wojna_literom
 FROM
     pracownicy;
-
-
 
 -- 3.
 
@@ -31,8 +25,6 @@ FROM
 WHERE
     instr(nazwisko, 'L') BETWEEN 1 AND ( length(nazwisko) / 2 );
 
-
-
 -- 4.
 
 SELECT
@@ -40,8 +32,6 @@ SELECT
     round(placa_pod * 1.15) AS podwyzka
 FROM
     pracownicy;
-
-
 
 -- 5.
 
@@ -54,8 +44,6 @@ SELECT
 FROM
     pracownicy;
 
-
-
 -- 6.
 
 SELECT
@@ -64,8 +52,6 @@ SELECT
     EXTRACT(YEAR FROM((DATE '2000-01-01' - zatrudniony) YEAR TO MONTH)) AS staz_w_2000
 FROM
     pracownicy;
-
-
 
 -- 7.
 
@@ -77,16 +63,12 @@ FROM
 WHERE
     id_zesp = 20;
 
-
-
 -- 8.
 
 SELECT
     to_char(current_date, 'DAY') AS dzis
 FROM
     dual;
-
-
 
 -- 9.
 
@@ -106,8 +88,6 @@ SELECT
 FROM
     zespoly;
 
-
-
 -- 10.
 
 SELECT
@@ -125,8 +105,6 @@ FROM
     pracownicy
 ORDER BY
     placa_pod DESC;
-
-
 
 -- 11.
 
