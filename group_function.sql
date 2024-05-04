@@ -1,6 +1,5 @@
 /* Język SQL. Rozdział 4. Funkcje grupowe – zadania  */
 
-
 -- 1.
 SELECT
     MIN(placa_pod) AS minimum,
@@ -9,10 +8,7 @@ SELECT
 FROM
     pracownicy;
 
-
-
 -- 2.
-
 SELECT
     etat,
     AVG(placa_pod) AS srednia
@@ -23,10 +19,7 @@ GROUP BY
 ORDER BY
     srednia DESC;
 
-
-
 -- 3.
-
 SELECT
     COUNT(*) AS profesorowie
 FROM
@@ -34,10 +27,7 @@ FROM
 WHERE
     etat = 'PROFESOR';
 
-
-
 -- 4.
-
 SELECT
     id_zesp,
     SUM(placa_pod + nvl(placa_dod, 0)) AS sumaryczne_place
@@ -48,10 +38,7 @@ GROUP BY
 ORDER BY
     id_zesp;
 
-
-
 -- 5.
-
 SELECT
     MAX(SUM(placa_pod + nvl(placa_dod, 0))) AS max_sum_plac
 FROM
@@ -59,10 +46,7 @@ FROM
 GROUP BY
     id_zesp;
 
-
-
 -- 6.
-
 SELECT
     id_szefa AS id_szefa,
     MIN(placa_pod) AS minimalna
@@ -75,10 +59,7 @@ GROUP BY
 ORDER BY
     minimalna DESC;
 
-
-
 -- 7. 
-
 SELECT
     id_zesp,
     COUNT(*) AS ilu_pracuje
@@ -89,10 +70,7 @@ GROUP BY
 ORDER BY
     ilu_pracuje DESC;
 
-
-
 -- 8.
-
 SELECT
     id_zesp,
     COUNT(*) AS ilu_pracuje
@@ -105,10 +83,7 @@ HAVING
 ORDER BY
     ilu_pracuje DESC;
 
-
-
 -- 9.
-
 SELECT
     id_prac
 FROM
@@ -121,10 +96,7 @@ WHERE
             pracownicy
     );
 
-
-
 -- 10.
-
 SELECT
     etat,
     AVG(placa_pod) AS srednia,
@@ -136,10 +108,7 @@ WHERE
 GROUP BY
     etat;
 
-
-
 -- 11.
-
 SELECT
     id_zesp,
     etat,
@@ -159,10 +128,7 @@ ORDER BY
     id_zesp,
     etat;
 
-
-
 -- 12.
-
 SELECT
     EXTRACT(YEAR FROM zatrudniony) AS rok,
     COUNT(*) AS ilu_pracownikow
@@ -173,10 +139,7 @@ GROUP BY
 ORDER BY
     rok;
 
-
-
 -- 13.
-
 SELECT
     length(nazwisko) AS "Ile liter",
     COUNT(*) AS "W ilu nazwiskach"
@@ -187,19 +150,13 @@ GROUP BY
 ORDER BY
     "Ile liter";
 
-
-
 -- 14.
-
 SELECT
     SUM(sign(instr(nazwisko, 'A') + instr(nazwisko, 'a'))) AS "Ile nazwisk z A"
 FROM
     pracownicy;
 
-
-
 -- 15.
-
 SELECT
     SUM(sign(instr(nazwisko, 'A') + instr(nazwisko, 'a'))) AS "Ile nazwisk z A",
     SUM(sign(instr(nazwisko, 'E') + instr(nazwisko, 'e'))) AS "Ile nazwisk z E"
