@@ -1,6 +1,5 @@
 /* Język SQL. Rozdział 10.Kursory – zadania  */
 
-
 -- 1
 DECLARE
     CURSOR c_prac IS SELECT nazwisko, zatrudniony FROM pracownicy WHERE etat='ASYSTENT';
